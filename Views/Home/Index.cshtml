@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Here Are Some Delicious Foods!</h1>
+    @{
+        var StringList = new List<string>{
+                                "Ramen",
+                                "Chimichangas",
+                                "Shepards Pie",
+                                "Cheese Burger"
+                            };
+        
+    }
+    @foreach(var word in StringList)
+    {
+        <div>
+            @if (word.StartsWith("C") || word.StartsWith("c"))
+            {
+                <p style = "color: red;">@word</p>
+            }
+            else
+            {
+                <p>@word</p>
+            }
+        </div>
+    }
+</div>
